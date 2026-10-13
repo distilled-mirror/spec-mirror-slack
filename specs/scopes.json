@@ -818,6 +818,26 @@
     "scope_families": []
   },
   {
+    "name": "code_channels:manage",
+    "description": "Create and manage code channels and their properties",
+    "token_types": [
+      "Bot"
+    ],
+    "compatible_api_methods": [
+      "agents.conversations.archive",
+      "agents.conversations.create",
+      "agents.conversations.getCanvas",
+      "agents.conversations.listViews",
+      "agents.conversations.removeView",
+      "agents.conversations.setCanvasContent",
+      "agents.conversations.setCommands",
+      "agents.conversations.setProperties",
+      "agents.conversations.setView"
+    ],
+    "compatible_events": [],
+    "scope_families": []
+  },
+  {
     "name": "commands",
     "description": "Add shortcuts and slash commands that people can use",
     "token_types": [
