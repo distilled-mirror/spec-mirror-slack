@@ -468,14 +468,6 @@
     "scope_families": []
   },
   {
-    "name": "apps.requests:write",
-    "description": "Create or cancel an App Approval request on user's behalf",
-    "token_types": [
-      "User"
-    ],
-    "scope_families": []
-  },
-  {
     "name": "assistant:write",
     "description": "Allow your Slack app to act as an App Agent",
     "token_types": [
