@@ -370,7 +370,8 @@
                 "date_updated",
                 "name",
                 "permalink",
-                "is_archived"
+                "is_archived",
+                "channel_type"
               ],
               "properties": {
                 "team_id": {
@@ -413,6 +414,16 @@
                 "is_archived": {
                   "type": "boolean",
                   "desc": "Whether the channel is archived."
+                },
+                "channel_type": {
+                  "type": "string",
+                  "desc": "Type of the channel",
+                  "enum": [
+                    "public_channel",
+                    "private_channel",
+                    "mpim",
+                    "im"
+                  ]
                 }
               }
             }

@@ -1155,14 +1155,6 @@
     ]
   },
   {
-    "name": "hosting:write",
-    "description": "Manage and deploy Slack apps",
-    "token_types": [
-      "User"
-    ],
-    "scope_families": []
-  },
-  {
     "name": "identify",
     "description": "View information about a user's identity",
     "token_types": [
