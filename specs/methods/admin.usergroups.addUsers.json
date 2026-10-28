@@ -24,14 +24,14 @@
       },
       "id": {
         "desc": "ID of the usergroup to add users to",
-        "example": "S0604QSJC",
+        "example": "S0123ABC456",
         "type": "string",
         "subtype": "user_group",
         "schema": "subteam_id"
       },
       "users": {
         "desc": "The encoded user IDs to add to the usergroup, provided as a JSON array or a comma-separated string.",
-        "example": "U060R4BJ4,U060RNRCZ",
+        "example": "U1111AAA111,U222BBB222",
         "type": "array",
         "maxItems": 15000,
         "items": {

@@ -24,7 +24,9 @@
       "User"
     ],
     "compatible_api_methods": [
-      "admin.analytics.getFile"
+      "admin.analytics.getFile",
+      "admin.analytics.messages.activity",
+      "admin.analytics.messages.metadata"
     ],
     "compatible_events": [],
     "scope_families": [
@@ -54,10 +56,16 @@
     "compatible_api_methods": [
       "admin.apps.approved.list",
       "admin.apps.config.lookup",
+      "admin.apps.mcp.servers.list",
+      "admin.apps.mcp.servers.permissions.list",
+      "admin.apps.permissions.list",
       "admin.apps.requests.list",
       "admin.apps.restricted.list"
     ],
-    "compatible_events": [],
+    "compatible_events": [
+      "app_deleted",
+      "app_uninstalled_team"
+    ],
     "scope_families": [
       "Admin"
     ]
@@ -72,6 +80,10 @@
       "admin.apps.approve",
       "admin.apps.clearResolution",
       "admin.apps.config.set",
+      "admin.apps.mcp.servers.permissions.set",
+      "admin.apps.permissions.add",
+      "admin.apps.permissions.remove",
+      "admin.apps.permissions.set",
       "admin.apps.requests.cancel",
       "admin.apps.restrict",
       "admin.apps.uninstall"
@@ -149,7 +161,8 @@
     ],
     "compatible_api_methods": [
       "admin.conversations.createForObjects",
-      "admin.conversations.linkObjects"
+      "admin.conversations.linkObjects",
+      "admin.conversations.unlinkObjects"
     ],
     "compatible_events": [],
     "scope_families": [
@@ -191,6 +204,8 @@
       "admin.conversations.bulkArchive",
       "admin.conversations.bulkDelete",
       "admin.conversations.bulkMove",
+      "admin.conversations.bulkSetExcludeFromSlackAi",
+      "admin.conversations.bulkSetProperties",
       "admin.conversations.convertToPrivate",
       "admin.conversations.convertToPublic",
       "admin.conversations.create",
@@ -310,7 +325,8 @@
       "admin.teams.settings.setDiscoverability",
       "admin.teams.settings.setIcon",
       "admin.teams.settings.setName",
-      "admin.usergroups.addTeams"
+      "admin.usergroups.addTeams",
+      "admin.usergroups.removeTeams"
     ],
     "compatible_events": [],
     "scope_families": [
@@ -324,6 +340,7 @@
       "User"
     ],
     "compatible_api_methods": [
+      "admin.usergroups.fetch",
       "admin.usergroups.listChannels"
     ],
     "compatible_events": [],
@@ -339,7 +356,12 @@
     ],
     "compatible_api_methods": [
       "admin.usergroups.addChannels",
-      "admin.usergroups.removeChannels"
+      "admin.usergroups.addUsers",
+      "admin.usergroups.create",
+      "admin.usergroups.removeChannels",
+      "admin.usergroups.removeUsers",
+      "admin.usergroups.update",
+      "admin.usergroups.uploadUsers"
     ],
     "compatible_events": [],
     "scope_families": [
@@ -354,6 +376,7 @@
     ],
     "compatible_api_methods": [
       "admin.auth.policy.getEntities",
+      "admin.users.getExpiration",
       "admin.users.list",
       "admin.users.session.getSettings",
       "admin.users.session.list",
@@ -437,7 +460,8 @@
     "compatible_api_methods": [
       "apps.manifest.export",
       "functions.distributions.permissions.list"
-    ]
+    ],
+    "compatible_events": []
   },
   {
     "name": "app_configurations:write",
@@ -447,6 +471,8 @@
     ],
     "scope_families": [],
     "compatible_api_methods": [
+      "apps.icon.set",
+      "apps.managed.permissions.set",
       "apps.manifest.create",
       "apps.manifest.delete",
       "apps.manifest.update",
@@ -454,7 +480,8 @@
       "functions.distributions.permissions.add",
       "functions.distributions.permissions.remove",
       "functions.distributions.permissions.set"
-    ]
+    ],
+    "compatible_events": []
   },
   {
     "name": "app_mentions:read",
@@ -503,7 +530,8 @@
     "scope_families": [],
     "compatible_api_methods": [
       "apps.event.authorizations.list"
-    ]
+    ],
+    "compatible_events": []
   },
   {
     "name": "bookmarks:read",
@@ -669,10 +697,14 @@
       "conversations.archive",
       "conversations.close",
       "conversations.create",
+      "conversations.invite",
       "conversations.kick",
       "conversations.leave",
       "conversations.mark",
+      "conversations.open",
       "conversations.rename",
+      "conversations.setPurpose",
+      "conversations.setTopic",
       "conversations.unarchive"
     ],
     "compatible_events": [],
@@ -717,11 +749,15 @@
       "conversations.archive",
       "conversations.close",
       "conversations.create",
+      "conversations.invite",
       "conversations.join",
       "conversations.kick",
       "conversations.leave",
       "conversations.mark",
+      "conversations.open",
       "conversations.rename",
+      "conversations.setPurpose",
+      "conversations.setTopic",
       "conversations.unarchive"
     ],
     "compatible_events": [],
@@ -764,16 +800,24 @@
       "User"
     ],
     "compatible_api_methods": [
+      "agents.sessions.rename",
+      "agents.sessions.setStatus",
       "assistant.threads.setStatus",
+      "chat.appendStream",
       "chat.delete",
       "chat.deleteScheduledMessage",
       "chat.meMessage",
       "chat.postEphemeral",
       "chat.postMessage",
       "chat.scheduleMessage",
+      "chat.startStream",
+      "chat.stopStream",
       "chat.update"
     ],
-    "compatible_events": [],
+    "compatible_events": [
+      "agent_session_stopped",
+      "agent_session_title_changed"
+    ],
     "scope_families": []
   },
   {
@@ -848,7 +892,8 @@
     "scope_families": [],
     "compatible_api_methods": [
       "apps.connections.open"
-    ]
+    ],
+    "compatible_events": []
   },
   {
     "name": "conversations.connect:manage",
@@ -1105,10 +1150,14 @@
       "conversations.archive",
       "conversations.close",
       "conversations.create",
+      "conversations.invite",
       "conversations.kick",
       "conversations.leave",
       "conversations.mark",
+      "conversations.open",
       "conversations.rename",
+      "conversations.setPurpose",
+      "conversations.setTopic",
       "conversations.unarchive"
     ],
     "compatible_events": [],
@@ -1152,7 +1201,8 @@
     "scope_families": [],
     "compatible_api_methods": [
       "apps.activities.list"
-    ]
+    ],
+    "compatible_events": []
   },
   {
     "name": "identify",
@@ -1228,12 +1278,15 @@
       "conversations.archive",
       "conversations.close",
       "conversations.create",
+      "conversations.invite",
       "conversations.kick",
       "conversations.leave",
       "conversations.mark",
+      "conversations.open",
       "conversations.rename",
-      "conversations.unarchive",
-      "conversations.open"
+      "conversations.setPurpose",
+      "conversations.setTopic",
+      "conversations.unarchive"
     ],
     "compatible_events": [],
     "scope_families": []
@@ -1437,10 +1490,14 @@
       "conversations.archive",
       "conversations.close",
       "conversations.create",
+      "conversations.invite",
       "conversations.kick",
       "conversations.leave",
       "conversations.mark",
+      "conversations.open",
       "conversations.rename",
+      "conversations.setPurpose",
+      "conversations.setTopic",
       "conversations.unarchive"
     ],
     "compatible_events": [],
@@ -1661,7 +1718,9 @@
       "Legacy Bot",
       "User"
     ],
-    "compatible_api_methods": [],
+    "compatible_api_methods": [
+      "assistant.search.context"
+    ],
     "compatible_events": [],
     "scope_families": [
       "Search"
@@ -1673,7 +1732,9 @@
     "token_types": [
       "User"
     ],
-    "compatible_api_methods": [],
+    "compatible_api_methods": [
+      "assistant.search.context"
+    ],
     "compatible_events": [],
     "scope_families": [
       "Search"
@@ -1685,7 +1746,9 @@
     "token_types": [
       "User"
     ],
-    "compatible_api_methods": [],
+    "compatible_api_methods": [
+      "assistant.search.context"
+    ],
     "compatible_events": [],
     "scope_families": [
       "Search"
@@ -1697,7 +1760,9 @@
     "token_types": [
       "User"
     ],
-    "compatible_api_methods": [],
+    "compatible_api_methods": [
+      "assistant.search.context"
+    ],
     "compatible_events": [],
     "scope_families": [
       "Search"
@@ -1726,7 +1791,9 @@
       "Bot",
       "User"
     ],
-    "compatible_api_methods": [],
+    "compatible_api_methods": [
+      "assistant.search.context"
+    ],
     "compatible_events": [],
     "scope_families": [
       "Search"
@@ -1818,7 +1885,8 @@
     "scope_families": [],
     "compatible_api_methods": [
       "migration.exchange"
-    ]
+    ],
+    "compatible_events": []
   },
   {
     "name": "triggers:read",
@@ -1902,8 +1970,9 @@
     "compatible_events": [
       "team_join",
       "user_change",
-      "user_status_changed",
-      "user_profile_changed"
+      "user_guest_status_changed",
+      "user_profile_changed",
+      "user_status_changed"
     ],
     "scope_families": []
   },
@@ -1930,10 +1999,13 @@
       "Legacy Bot"
     ],
     "compatible_api_methods": [
+      "apps.user.connection.update",
       "users.setActive",
       "users.setPresence"
     ],
-    "compatible_events": [],
+    "compatible_events": [
+      "user_connection"
+    ],
     "scope_families": []
   },
   {

@@ -1,6 +1,6 @@
 {
   "source": "https://docs.slack.dev",
-  "count": 343,
+  "count": 346,
   "pages": [
     {
       "url": "https://docs.slack.dev/reference/scopes.json",
@@ -403,8 +403,20 @@
       "file": "methods/admin.usergroups.uploadUsers.json"
     },
     {
+      "url": "https://docs.slack.dev/reference/methods/admin.users.access.pause.json",
+      "file": "methods/admin.users.access.pause.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.users.access.resume.json",
+      "file": "methods/admin.users.access.resume.json"
+    },
+    {
       "url": "https://docs.slack.dev/reference/methods/admin.users.assign.json",
       "file": "methods/admin.users.assign.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.users.deactivate.json",
+      "file": "methods/admin.users.deactivate.json"
     },
     {
       "url": "https://docs.slack.dev/reference/methods/admin.users.getExpiration.json",
