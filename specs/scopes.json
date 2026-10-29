@@ -290,6 +290,36 @@
     ]
   },
   {
+    "name": "admin.skills:read",
+    "description": "View all Slackbot skills in an organization",
+    "token_types": [
+      "User"
+    ],
+    "compatible_api_methods": [
+      "admin.slackbot.skills.list"
+    ],
+    "compatible_events": [],
+    "scope_families": [
+      "Admin"
+    ]
+  },
+  {
+    "name": "admin.skills:write",
+    "description": "Publish and deploy Slackbot skills in an organization",
+    "token_types": [
+      "User"
+    ],
+    "compatible_api_methods": [
+      "admin.slackbot.skills.publish",
+      "admin.slackbot.skills.setAutoEnabled",
+      "admin.slackbot.skills.unpublish"
+    ],
+    "compatible_events": [],
+    "scope_families": [
+      "Admin"
+    ]
+  },
+  {
     "name": "admin.teams:read",
     "description": "Access information about a workspace",
     "token_types": [
@@ -1797,6 +1827,39 @@
     "compatible_events": [],
     "scope_families": [
       "Search"
+    ]
+  },
+  {
+    "name": "skills:read",
+    "description": "View Slackbot skills a user can access",
+    "token_types": [
+      "User"
+    ],
+    "compatible_api_methods": [
+      "slackbot.skills.info",
+      "slackbot.skills.list"
+    ],
+    "compatible_events": [],
+    "scope_families": [
+      "Skills"
+    ]
+  },
+  {
+    "name": "skills:write",
+    "description": "Create, edit and remove a user's Slackbot skills, and manage their skill library",
+    "token_types": [
+      "User"
+    ],
+    "compatible_api_methods": [
+      "slackbot.skills.create",
+      "slackbot.skills.delete",
+      "slackbot.skills.library.add",
+      "slackbot.skills.library.remove",
+      "slackbot.skills.update"
+    ],
+    "compatible_events": [],
+    "scope_families": [
+      "Skills"
     ]
   },
   {

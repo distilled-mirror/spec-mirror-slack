@@ -1,6 +1,6 @@
 {
   "source": "https://docs.slack.dev",
-  "count": 346,
+  "count": 357,
   "pages": [
     {
       "url": "https://docs.slack.dev/reference/scopes.json",
@@ -317,6 +317,22 @@
     {
       "url": "https://docs.slack.dev/reference/methods/admin.roles.removeAssignments.json",
       "file": "methods/admin.roles.removeAssignments.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.slackbot.skills.list.json",
+      "file": "methods/admin.slackbot.skills.list.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.slackbot.skills.publish.json",
+      "file": "methods/admin.slackbot.skills.publish.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.slackbot.skills.setAutoEnabled.json",
+      "file": "methods/admin.slackbot.skills.setAutoEnabled.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.slackbot.skills.unpublish.json",
+      "file": "methods/admin.slackbot.skills.unpublish.json"
     },
     {
       "url": "https://docs.slack.dev/reference/methods/admin.teams.admins.list.json",
@@ -1205,6 +1221,34 @@
     {
       "url": "https://docs.slack.dev/reference/methods/search.messages.json",
       "file": "methods/search.messages.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.create.json",
+      "file": "methods/slackbot.skills.create.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.delete.json",
+      "file": "methods/slackbot.skills.delete.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.info.json",
+      "file": "methods/slackbot.skills.info.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.library.add.json",
+      "file": "methods/slackbot.skills.library.add.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.library.remove.json",
+      "file": "methods/slackbot.skills.library.remove.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.list.json",
+      "file": "methods/slackbot.skills.list.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/slackbot.skills.update.json",
+      "file": "methods/slackbot.skills.update.json"
     },
     {
       "url": "https://docs.slack.dev/reference/methods/stars.add.json",
