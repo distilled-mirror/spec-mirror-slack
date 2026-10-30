@@ -1831,8 +1831,9 @@
   },
   {
     "name": "skills:read",
-    "description": "View Slackbot skills a user can access",
+    "description": "View Slackbot skills a user or app can access",
     "token_types": [
+      "Bot",
       "User"
     ],
     "compatible_api_methods": [
@@ -1846,8 +1847,9 @@
   },
   {
     "name": "skills:write",
-    "description": "Create, edit and remove a user's Slackbot skills, and manage their skill library",
+    "description": "Create, edit, and remove Slackbot skills as a user or app, and manage their skill library",
     "token_types": [
+      "Bot",
       "User"
     ],
     "compatible_api_methods": [
