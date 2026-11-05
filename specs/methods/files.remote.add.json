@@ -174,7 +174,7 @@
       "desc": "bot user token is required"
     },
     "invalid_external_id": {
-      "desc": "The external_id provided is too long."
+      "desc": "The external_id provided is too long (over 255 characters) or contains non-ASCII characters."
     },
     "too_large": {
       "desc": "The uploaded image had excessive dimensions"

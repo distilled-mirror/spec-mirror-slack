@@ -1,6 +1,6 @@
 {
   "source": "https://docs.slack.dev",
-  "count": 357,
+  "count": 358,
   "pages": [
     {
       "url": "https://docs.slack.dev/reference/scopes.json",
@@ -201,6 +201,10 @@
     {
       "url": "https://docs.slack.dev/reference/methods/admin.conversations.invite.json",
       "file": "methods/admin.conversations.invite.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.conversations.kick.json",
+      "file": "methods/admin.conversations.kick.json"
     },
     {
       "url": "https://docs.slack.dev/reference/methods/admin.conversations.linkObjects.json",

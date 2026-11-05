@@ -212,6 +212,7 @@
       "admin.conversations.delete",
       "admin.conversations.disconnectShared",
       "admin.conversations.invite",
+      "admin.conversations.kick",
       "admin.conversations.removeCustomRetention",
       "admin.conversations.rename",
       "admin.conversations.restrictAccess.addGroup",
@@ -428,7 +429,10 @@
     "compatible_api_methods": [
       "admin.auth.policy.assignEntities",
       "admin.auth.policy.removeEntities",
+      "admin.users.access.pause",
+      "admin.users.access.resume",
       "admin.users.assign",
+      "admin.users.deactivate",
       "admin.users.invite",
       "admin.users.remove",
       "admin.users.session.clearSettings",
