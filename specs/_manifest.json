@@ -1,6 +1,6 @@
 {
   "source": "https://docs.slack.dev",
-  "count": 358,
+  "count": 360,
   "pages": [
     {
       "url": "https://docs.slack.dev/reference/scopes.json",
@@ -25,6 +25,14 @@
     {
       "url": "https://docs.slack.dev/reference/methods/admin.analytics.messages.metadata.json",
       "file": "methods/admin.analytics.messages.metadata.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.analytics.slackbot.skills.json",
+      "file": "methods/admin.analytics.slackbot.skills.json"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/admin.analytics.slackbot.tools.json",
+      "file": "methods/admin.analytics.slackbot.tools.json"
     },
     {
       "url": "https://docs.slack.dev/reference/methods/admin.apps.activities.list.json",
