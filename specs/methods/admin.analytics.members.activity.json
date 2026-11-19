@@ -1,0 +1,172 @@
+{
+  "desc": "Retrieves activity metrics for each member of an organization or workspace for one day. Returns the same metrics as the member analytics dashboard, sorted by user ID.",
+  "http_method": "GET",
+  "scope": {
+    "user": [
+      "admin.analytics:read"
+    ]
+  },
+  "rate_limits": "t2",
+  "args": {
+    "type": "object",
+    "required": [
+      "token"
+    ],
+    "properties": {
+      "token": {
+        "type": "string",
+        "subtype": "auth",
+        "example": "xxxx-xxxxxxxxx-xxxx",
+        "desc": "Authentication token bearing required scopes. Tokens should be passed as an HTTP Authorization header or alternatively, as a POST parameter."
+      },
+      "date": {
+        "desc": "The day to report on, as `YYYY-MM-DD` in UTC. Each metric counts that day's activity. Defaults to the most recent day with data. The response's `available_date_range` gives the earliest and latest days you can request.",
+        "schema": "date",
+        "example": "2026-09-30"
+      },
+      "team_id": {
+        "desc": "Workspace ID to scope the results to. With an organization-level token, omit it for organization-wide results. A workspace-level token may only pass its own workspace.",
+        "example": "T1234567890",
+        "type": "string",
+        "subtype": "team",
+        "schema": "workspace_id"
+      },
+      "member_types": {
+        "desc": "Comma-separated list of member types to include. Omit to include every member type.",
+        "type": "array",
+        "maxItems": 9,
+        "items": {
+          "type": "string",
+          "enum": [
+            "regular_members",
+            "single_channel_guests",
+            "multi_channel_guests",
+            "frontline_members",
+            "org_owners",
+            "org_admins",
+            "workspace_owners",
+            "workspace_admins",
+            "invited"
+          ]
+        },
+        "example": "single_channel_guests,multi_channel_guests"
+      },
+      "user_ids": {
+        "desc": "Comma-separated list of user IDs to return. Use `admin.analytics.members.metadata`, which supports searching by name and email, to find them; this method never returns names or email addresses. Up to 500 IDs. Deactivated members may be included. Omit to return every member.",
+        "type": "array",
+        "maxItems": 500,
+        "items": {
+          "type": "string",
+          "schema": "user_id"
+        },
+        "example": "U0123ABCD,U0456EFGH"
+      },
+      "cursor": {
+        "type": "string",
+        "maxLength": 512,
+        "desc": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection.",
+        "example": "Y3Vyc29yX21hcms6QW9JSUtqWTA="
+      },
+      "limit": {
+        "type": "integer",
+        "desc": "Maximum number of members to return. Max allowed is 500.",
+        "minimum": 1,
+        "maximum": 500,
+        "default": 100
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "date",
+      "available_date_range",
+      "members",
+      "total_count"
+    ],
+    "properties": {
+      "date": {
+        "desc": "The day the metrics cover, as `YYYY-MM-DD` in UTC: the `date` argument, or the most recent day with data when it was omitted.",
+        "schema": "date",
+        "example": "2026-09-30"
+      },
+      "available_date_range": {
+        "type": "object",
+        "required": [
+          "start_date",
+          "end_date"
+        ],
+        "desc": "The days this method has data for. `start_date` is the earliest `date` it accepts and `end_date` the most recent, which is also the default.",
+        "properties": {
+          "start_date": {
+            "desc": "The earliest day with data, as `YYYY-MM-DD` in UTC (inclusive).",
+            "schema": "date",
+            "example": "2025-11-01"
+          },
+          "end_date": {
+            "desc": "The most recent day with data, as `YYYY-MM-DD` in UTC (inclusive).",
+            "schema": "date",
+            "example": "2026-10-27"
+          }
+        }
+      },
+      "members": {
+        "schema": "member_activity"
+      },
+      "total_count": {
+        "type": "integer",
+        "desc": "Total number of members that match the request, across all pages."
+      },
+      "response_metadata": {
+        "type": "object",
+        "required": [
+          "next_cursor"
+        ],
+        "properties": {
+          "next_cursor": {
+            "type": "string",
+            "desc": "More items exist, use next_cursor as the value of cursor for next call"
+          }
+        }
+      }
+    }
+  },
+  "errors": {
+    "invalid_arguments": {
+      "desc": "Required arguments either were not provided or contain invalid values, including a `date` that is not a real calendar day."
+    },
+    "invalid_cursor": {
+      "desc": "The `cursor` value is not valid."
+    },
+    "not_an_admin": {
+      "desc": "The token's user is not an owner or admin, and does not have permission to access the analytics API."
+    },
+    "feature_not_available": {
+      "desc": "The team's plan does not include analytics API access."
+    },
+    "member_analytics_disabled": {
+      "desc": "Member analytics are disabled for the team."
+    },
+    "team_not_on_org": {
+      "desc": "`team_id` is not a workspace the token can access: it is not part of the token's organization, or the token is workspace-level and `team_id` is another workspace."
+    },
+    "date_before_created_date": {
+      "desc": "`date` is before the team or organization was created."
+    },
+    "data_not_available_for_date": {
+      "desc": "Analytics are not available for `date`. Call the method without `date` and use `available_date_range` from the response to find the supported days."
+    },
+    "analytics_unavailable": {
+      "desc": "Analytics could not be found for the team."
+    },
+    "admin_analytics_disabled": {
+      "desc": "Analytics are temporarily unavailable. Wait and try again."
+    },
+    "incomplete_analytics": {
+      "desc": "The full set of results could not be retrieved. Wait and try again."
+    },
+    "rate_limited": {
+      "desc": "The organization has made too many calls to this method in a short amount of time. Wait and try again."
+    }
+  }
+}

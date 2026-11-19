@@ -7,6 +7,20 @@
     ]
   },
   {
+    "name": "admin.analytics.members.activity",
+    "description": "Retrieves activity metrics for each member of an organization or workspace for one day. Returns the same metrics as the member analytics dashboard, sorted by user ID.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
+    "name": "admin.analytics.members.metadata",
+    "description": "Retrieves profile metadata for each member of an organization or workspace. Returns the same profile fields as the member analytics dashboard, sorted by user ID, as the companion of `admin.analytics.members.activity`.",
+    "family": [
+      "admin"
+    ]
+  },
+  {
     "name": "admin.analytics.messages.activity",
     "description": "Retrieves activity metrics for messages from a given channel, created between oldest_ts and latest_ts",
     "family": [

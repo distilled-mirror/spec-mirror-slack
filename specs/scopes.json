@@ -25,8 +25,12 @@
     ],
     "compatible_api_methods": [
       "admin.analytics.getFile",
+      "admin.analytics.members.activity",
+      "admin.analytics.members.metadata",
       "admin.analytics.messages.activity",
-      "admin.analytics.messages.metadata"
+      "admin.analytics.messages.metadata",
+      "admin.analytics.slackbot.skills",
+      "admin.analytics.slackbot.tools"
     ],
     "compatible_events": [],
     "scope_families": [
