@@ -89,6 +89,9 @@
     },
     "cannot_modify_role_admin": {
       "desc": "The user does not have permission to modify the admin role."
+    },
+    "not_permitted": {
+      "desc": "Users cannot be assigned to or removed from a permission set."
     }
   }
 }

@@ -107,7 +107,7 @@
       "desc": "This feature is only available on Enterprise Grid plans."
     },
     "user_not_found": {
-      "desc": "This actor does not have access to at least one valid named entity."
+      "desc": "This actor does not have access to at least one valid named entity. A user ID that is already set on the app under the same permission_type is kept even if it no longer resolves, for example a deactivated user."
     },
     "usergroup_not_found": {
       "desc": "The usergroup is not valid."

@@ -220,6 +220,12 @@
     },
     "restricted_action": {
       "desc": "The token does not have permission to access this resource, or the channel is not public and the organization has disabled private channel analytics."
+    },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org owners and Admins."
+    },
+    "two_factor_setup_required": {
+      "desc": "Two factor authentication needs to be set up."
     }
   }
 }

@@ -77,6 +77,9 @@
     },
     "app_cannot_join_channel": {
       "desc": "This app cannot join this channel."
+    },
+    "not_workspace_member": {
+      "desc": "User doesn't belong to the workspace this channel is in."
     }
   }
 }

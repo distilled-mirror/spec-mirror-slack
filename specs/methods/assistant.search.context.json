@@ -519,6 +519,11 @@
         "example": [
           "files"
         ]
+      },
+      "page_limit_reached": {
+        "type": "boolean",
+        "desc": "True when this is the last page that can be fetched but more results exist past it. `next_cursor` is then an empty string even though results were cut off; narrow the query to see the rest. Present only when true; see the `search_page_limit_reached` warning.",
+        "example": true
       }
     }
   },
@@ -560,6 +565,9 @@
   "warnings": {
     "content_type_search_failed": {
       "desc": "One or more requested content types could not be searched, so their results are missing rather than empty. `failed_content_types` names them."
+    },
+    "search_page_limit_reached": {
+      "desc": "This is the last page that can be fetched, but more results exist past it. Narrow the query to see them."
     }
   }
 }

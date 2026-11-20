@@ -52,6 +52,9 @@
     },
     "not_archived": {
       "desc": "Channel is not archived."
+    },
+    "channel_frozen": {
+      "desc": "The channel is frozen and can't be unarchived."
     }
   }
 }

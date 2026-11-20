@@ -77,6 +77,9 @@
     },
     "user_not_found": {
       "desc": "Value passed for `user` was invalid."
+    },
+    "leave_failed": {
+      "desc": "The user could not be removed from the conversation, for example because their organization requires its members to stay in it."
     }
   }
 }

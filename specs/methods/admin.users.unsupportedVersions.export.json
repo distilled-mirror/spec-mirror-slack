@@ -50,6 +50,12 @@
     },
     "not_an_enterprise": {
       "desc": "Only enterprises are supported."
+    },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org owners and admins, or by workspace owners and admins on an Enterprise+ workspace."
+    },
+    "two_factor_setup_required": {
+      "desc": "Two factor authentication needs to be set up."
     }
   }
 }

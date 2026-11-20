@@ -80,6 +80,9 @@
     },
     "missing_scope": {
       "desc": "The calling token is not granted the necessary scopes to complete this operation."
+    },
+    "external_channel_migrating": {
+      "desc": "The channel is externally shared and is being migrated. Try again later."
     }
   }
 }

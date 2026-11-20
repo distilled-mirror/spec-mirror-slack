@@ -52,6 +52,9 @@
     },
     "error_modifying_workflows": {
       "desc": "Error modifying workflows"
+    },
+    "channel_not_found": {
+      "desc": "Channel not found."
     }
   }
 }

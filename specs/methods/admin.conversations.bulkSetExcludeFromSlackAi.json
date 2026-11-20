@@ -97,11 +97,17 @@
     "restricted_action": {
       "desc": "User does not have permission to perform this action"
     },
-    "feature_not_enabled": {
-      "desc": "The feature is not enabled"
-    },
     "disallowed_action": {
       "desc": "This property cannot be set on DMs or MPDMs."
+    },
+    "toggle_check_failed": {
+      "desc": "Excluding channels from Slack AI is not available for this team."
+    },
+    "restricted_plan_level": {
+      "desc": "Excluding channels from Slack AI is only available to Enterprise+ customers."
+    },
+    "unsupported_environment_variant": {
+      "desc": "Excluding channels from Slack AI is not available in this environment."
     }
   }
 }

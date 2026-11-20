@@ -268,6 +268,105 @@
     },
     "missing_client_id": {
       "desc": "Missing `client_id` in the assertion. It must match the `client_id` of the app requesting the token."
+    },
+    "expired_token": {
+      "desc": "The assertion has expired: its `exp` is in the past. Request a new assertion from the identity provider."
+    },
+    "idp_keys_unavailable": {
+      "desc": "Slack could not fetch the OpenID Connect discovery document (`/.well-known/openid-configuration`) or the `jwks_uri` of the identity provider named by the `iss` in the assertion: the request failed or returned an HTTP error status. Retry, and if it keeps failing, check that both are served over HTTPS."
+    },
+    "invalid_exp": {
+      "desc": "The `exp` in the assertion is not an integer. It must be the assertion's expiration time, in seconds since the epoch."
+    },
+    "invalid_header_encoding": {
+      "desc": "The header of the assertion is not base64url-encoded JSON."
+    },
+    "invalid_jwks": {
+      "desc": "The identity provider's `jwks_uri` did not return a JSON Web Key Set with a `keys` array."
+    },
+    "invalid_jwt_format": {
+      "desc": "Value passed for `assertion` is not a JWT in compact serialization. It must have exactly three segments separated by `.`."
+    },
+    "invalid_openid_provider_metadata": {
+      "desc": "The identity provider's OpenID Connect discovery document (`/.well-known/openid-configuration`) is not JSON with string `issuer` and `jwks_uri` fields."
+    },
+    "invalid_payload_encoding": {
+      "desc": "The payload of the assertion is not base64url-encoded JSON."
+    },
+    "invalid_signature": {
+      "desc": "The signature of the assertion does not verify against the identity provider's signing key named by its `kid`."
+    },
+    "invalid_sub_id": {
+      "desc": "The `sub_id` in the assertion is not a JSON object. It must identify the user in the `saml-nameid` format."
+    },
+    "invalid_token": {
+      "desc": "The assertion could not be verified. For example, its header has no `alg` or `kid`, its `alg` is not supported or doesn't match the signing key, or its `nbf`, `iat`, or `exp` is not a number."
+    },
+    "invalid_typ_header": {
+      "desc": "The `typ` in the header of the assertion is not `oauth-id-jag+jwt`."
+    },
+    "invalid_code_verifier": {
+      "desc": "The code_verifier is invalid."
+    },
+    "jwks_uri_not_https": {
+      "desc": "The `jwks_uri` in the identity provider's OpenID Connect discovery document is not an `https` URL."
+    },
+    "jwt_already_used": {
+      "desc": "The assertion has already been exchanged for a token. An assertion can be used only once: request a new one, with a new `jti`, from the identity provider."
+    },
+    "jwt_expired": {
+      "desc": "The assertion was presented before and has since expired. Request a new assertion, with a new `jti`, from the identity provider."
+    },
+    "missing_email": {
+      "desc": "Missing `email` in an assertion without a `sub_id`, or it is empty. It must be the email address of the user the token is for."
+    },
+    "missing_exp": {
+      "desc": "Missing `exp` in the assertion. It must be the assertion's expiration time, in seconds since the epoch."
+    },
+    "missing_issuer": {
+      "desc": "Missing `iss` in the assertion. It must be the issuer URL of the identity provider that issued the assertion."
+    },
+    "missing_jti": {
+      "desc": "Missing `jti` in the assertion, or it is empty. It must be a unique identifier for the assertion."
+    },
+    "missing_sub": {
+      "desc": "Missing `sub` in the assertion, or it is empty."
+    },
+    "missing_sub_id_format": {
+      "desc": "Missing `format` in the `sub_id` of the assertion. The only supported format is `saml-nameid`."
+    },
+    "missing_sub_id_issuer": {
+      "desc": "Missing `issuer` in the `sub_id` of the assertion, or it is not a string. It must be the SAML EntityID of the identity provider."
+    },
+    "missing_sub_id_nameid": {
+      "desc": "Missing `nameid` in the `sub_id` of the assertion, or it is not a string. It must be the user's SAML NameID."
+    },
+    "missing_typ_header": {
+      "desc": "Missing `typ` in the header of the assertion. It must be `oauth-id-jag+jwt`."
+    },
+    "openid_provider_issuer_mismatch": {
+      "desc": "The `issuer` in the identity provider's OpenID Connect discovery document does not exactly match the `iss` in the assertion."
+    },
+    "pkce_not_allowed": {
+      "desc": "The app is not allowed to use the PKCE flow."
+    },
+    "token_not_yet_valid": {
+      "desc": "The assertion is not valid yet: its `nbf` or `iat` is in the future. Check the identity provider's clock."
+    },
+    "unknown_kid": {
+      "desc": "The `kid` in the header of the assertion does not match any signing key published at the identity provider's `jwks_uri`."
+    },
+    "unknown_saml_issuer_for_team": {
+      "desc": "The `issuer` in the `sub_id` of the assertion is not a SAML identity provider configured for the organization or workspace."
+    },
+    "unsupported_sub_id_format": {
+      "desc": "The `format` of the `sub_id` in the assertion is not supported. The only supported format is `saml-nameid`."
+    },
+    "user_not_found": {
+      "desc": "No active user in the organization or workspace matches the user the assertion identifies by its `sub_id` NameID or, without a `sub_id`, its `email`. External guests can't be identified this way."
+    },
+    "well_known_url_not_https": {
+      "desc": "The `iss` in the assertion is not an `https` URL, so the identity provider's OpenID Connect discovery document can't be fetched."
     }
   }
 }

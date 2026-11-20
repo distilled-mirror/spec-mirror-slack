@@ -49,6 +49,18 @@
     },
     "unsupported_action_put": {
       "desc": "The user specified action is unsupported"
+    },
+    "insufficient_permissions": {
+      "desc": "This method is only accessible by org owners and Admins."
+    },
+    "not_an_admin": {
+      "desc": "This method is only accessible by workspace owners and Admins."
+    },
+    "team_is_restricted": {
+      "desc": "The token belongs to a workspace on an Enterprise organization. Use an org-level token."
+    },
+    "two_factor_setup_required": {
+      "desc": "Two factor authentication needs to be set up."
     }
   }
 }

@@ -90,6 +90,9 @@
     },
     "inviter_email_not_verified": {
       "desc": "The user is still invited, and the user whose token is calling this method has not verified the email address on their own account. They must verify it before adding an invited user to a workspace."
+    },
+    "invalid_channel_for_ura": {
+      "desc": "`is_ultra_restricted` is true and `channel_ids` doesn't name exactly one channel the single-channel guest can join."
     }
   }
 }

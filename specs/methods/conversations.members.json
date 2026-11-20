@@ -80,6 +80,9 @@
     },
     "missing_scope": {
       "desc": "The calling token is not granted the necessary scopes to complete this operation."
+    },
+    "external_channel_migrating": {
+      "desc": "The conversation is a Slack Connect channel that is being migrated to an Enterprise organization. Try again once the migration has finished."
     }
   }
 }

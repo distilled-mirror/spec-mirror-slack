@@ -89,6 +89,9 @@
     },
     "too_many_users": {
       "desc": "More than 10 users were passed."
+    },
+    "not_permitted": {
+      "desc": "Users cannot be assigned directly to a permission set. Assign a user group with admin.roles.addUsergroups instead."
     }
   }
 }

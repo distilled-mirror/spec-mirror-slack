@@ -90,6 +90,12 @@
     },
     "rate_limited": {
       "desc": "Too many requests in a short amount of time."
+    },
+    "not_an_admin": {
+      "desc": "This method is only accessible by org owners and Admins."
+    },
+    "two_factor_setup_required": {
+      "desc": "Two factor authentication needs to be set up."
     }
   }
 }
