@@ -1015,6 +1015,36 @@
     "scope_families": []
   },
   {
+    "name": "developer_accounts:write",
+    "description": "Create a Slack developer account on behalf of a user",
+    "token_types": [
+      "Bot"
+    ],
+    "compatible_api_methods": [],
+    "compatible_events": [],
+    "scope_families": []
+  },
+  {
+    "name": "developer_sandboxes:read",
+    "description": "View information about a developer's sandboxes",
+    "token_types": [
+      "Bot"
+    ],
+    "compatible_api_methods": [],
+    "compatible_events": [],
+    "scope_families": []
+  },
+  {
+    "name": "developer_sandboxes:write",
+    "description": "Create a sandbox on behalf of a developer",
+    "token_types": [
+      "Bot"
+    ],
+    "compatible_api_methods": [],
+    "compatible_events": [],
+    "scope_families": []
+  },
+  {
     "name": "dnd:read",
     "description": "View Do Not Disturb settings for people in a workspace",
     "token_types": [
